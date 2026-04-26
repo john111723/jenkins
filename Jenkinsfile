@@ -6,15 +6,11 @@ pipeline {
         DOCKERHUB_USER = 'john111723'
         IMAGE_NAME     = 'my-html-app'
         IMAGE_TAG      = "${env.BUILD_NUMBER}"
-        GIT_REPO       = 'github.com/john111723/jenkins-Demo.git'
+        GIT_REPO       = 'github.com/john111723/jenkins.git'
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: "https://${GIT_REPO}"
-            }
-        }
+       
 
         stage('Push Changes to GitHub') {
             steps {
