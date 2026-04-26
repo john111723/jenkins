@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Adder</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+        input { padding: 10px; margin: 5px; width: 60px; }
+        button { padding: 10px 20px; cursor: pointer; background: #28a745; color: white; border: none; }
+    </style>
+</head>
+<body>
+    <h2>Sum Calculator</h2>
+    <input type="number" id="num1" placeholder="0"> + 
+    <input type="number" id="num2" placeholder="0"> = 
+    <span id="result" style="font-weight:bold">0</span>
+    <br><br>
+    <button onclick="calculate()">Add Numbers</button>
+
+    <script>
+        function calculate() {
+            const n1 = parseFloat(document.getElementById('num1').value) || 0;
+            const n2 = parseFloat(document.getElementById('num2').value) || 0;
+            document.getElementById('result').innerText = n1 + n2;
+        }
+    </script>
+</body>
+</html>
