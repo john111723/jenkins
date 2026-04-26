@@ -44,7 +44,7 @@ pipeline {
                 withKubeConfig([credentialsId: 'kubeconfig-id']) {
                     sh """
                         kubectl set image deployment/my-html-deployment \
-                        html-container=${DOCKERHUB_USER}/${IMAGE_NAME}:${IMAGE_TAG}
+                        my-html-app=${DOCKERHUB_USER}/${IMAGE_NAME}:${IMAGE_TAG}
                     """
                 }
             }
